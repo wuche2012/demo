@@ -1,28 +1,35 @@
 package com.cc.framework.model;
 
 import java.util.Date;
+
 import javax.persistence.*;
+
 
 @Table(name = "sys_log")
 public class SysLog {
+	
+	/** "日志内容"属性名称 */
+	public static final String LOG_CONTENT_ATTRIBUTE_NAME = SysLog.class.getName() + ".CONTENT";
+	
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Long id;
 
-    @Column(name = "login_name")
-    private String loginName;
+    @Column(name = "create_date")
+    private Date createDate;
 
-    @Column(name = "role_name")
-    private String roleName;
+    @Column(name = "modify_date")
+    private Date modifyDate;
 
-    @Column(name = "opt_content")
-    private String optContent;
+    private String ip;
 
-    @Column(name = "client_ip")
-    private String clientIp;
+    private String operation;
 
-    @Column(name = "create_time")
-    private Date createTime;
+    private String operator;
+
+    private String content;
+
+    private String parameter;
 
     /**
      * @return id
@@ -39,72 +46,100 @@ public class SysLog {
     }
 
     /**
-     * @return login_name
+     * @return create_date
      */
-    public String getLoginName() {
-        return loginName;
+    public Date getCreateDate() {
+        return createDate;
     }
 
     /**
-     * @param loginName
+     * @param createDate
      */
-    public void setLoginName(String loginName) {
-        this.loginName = loginName;
+    public void setCreateDate(Date createDate) {
+        this.createDate = createDate;
     }
 
     /**
-     * @return role_name
+     * @return modify_date
      */
-    public String getRoleName() {
-        return roleName;
+    public Date getModifyDate() {
+        return modifyDate;
     }
 
     /**
-     * @param roleName
+     * @param modifyDate
      */
-    public void setRoleName(String roleName) {
-        this.roleName = roleName;
+    public void setModifyDate(Date modifyDate) {
+        this.modifyDate = modifyDate;
     }
 
     /**
-     * @return opt_content
+     * @return ip
      */
-    public String getOptContent() {
-        return optContent;
+    public String getIp() {
+        return ip;
     }
 
     /**
-     * @param optContent
+     * @param ip
      */
-    public void setOptContent(String optContent) {
-        this.optContent = optContent;
+    public void setIp(String ip) {
+        this.ip = ip;
     }
 
     /**
-     * @return client_ip
+     * @return operation
      */
-    public String getClientIp() {
-        return clientIp;
+    public String getOperation() {
+        return operation;
     }
 
     /**
-     * @param clientIp
+     * @param operation
      */
-    public void setClientIp(String clientIp) {
-        this.clientIp = clientIp;
+    public void setOperation(String operation) {
+        this.operation = operation;
     }
 
     /**
-     * @return create_time
+     * @return operator
      */
-    public Date getCreateTime() {
-        return createTime;
+    public String getOperator() {
+        return operator;
     }
 
     /**
-     * @param createTime
+     * @param operator
      */
-    public void setCreateTime(Date createTime) {
-        this.createTime = createTime;
+    public void setOperator(String operator) {
+        this.operator = operator;
+    }
+
+    /**
+     * @return content
+     */
+    public String getContent() {
+        return content;
+    }
+
+    /**
+     * @param content
+     */
+    public void setContent(String content) {
+        this.content = content;
+    }
+
+    /**
+     * @return parameter
+     */
+    public String getParameter() {
+        return parameter;
+    }
+
+    /**
+     * @param parameter
+     */
+    public void setParameter(String parameter) {
+        this.parameter = parameter;
     }
 }

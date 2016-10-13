@@ -66,9 +66,9 @@ public interface SysAdminService extends IService<SysAdmin> {
 	 * 获取当前登录用户名
 	 * 
 	 * @return 当前登录用户名,若不存在则返回null
-	 *//*
+	 */ 
 	String getCurrentUsername();
-*/
+
 	
 	SysAdmin find(Long id);
 

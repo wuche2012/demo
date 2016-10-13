@@ -93,6 +93,9 @@
                             <li>
                                 <a class="J_menuItem" href="${pageContext.request.contextPath}/admin/dict/index">字典管理</a>
                             </li>
+                            <li>
+                                <a class="J_menuItem" href="${pageContext.request.contextPath}/admin/log/index">日志管理</a>
+                            </li>
                         </ul>
                     </li>
 

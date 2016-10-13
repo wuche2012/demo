@@ -56,9 +56,14 @@
 	</bean>
 
 	<mvc:interceptors>
+		<mvc:interceptor>
+			<mvc:mapping path="/admin/**" />
+			<bean id="logInterceptor" class="com.cc.framework.interceptor.LogInterceptor" />
+		</mvc:interceptor>
 		<bean class="org.springframework.web.servlet.i18n.LocaleChangeInterceptor" />
 	</mvc:interceptors>
-
+	
+	
 	<!-- 支持返回json(避免IE在ajax请求时，返回json出现下载 ) -->
 	<bean
 		class="org.springframework.web.servlet.mvc.annotation.AnnotationMethodHandlerAdapter">

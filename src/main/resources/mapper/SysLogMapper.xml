@@ -1,15 +1,17 @@
-<?xml version="1.0" encoding="UTF-8"?>
-<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
-<mapper namespace="com.cc.framework.dao.SysLogMapper">
-  <resultMap id="BaseResultMap" type="com.cc.framework.model.SysLog">
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd" >
+<mapper namespace="com.cc.framework.dao.SysLogMapper" >
+  <resultMap id="BaseResultMap" type="com.cc.framework.model.SysLog" >
     <!--
       WARNING - @mbggenerated
     -->
-    <id column="id" jdbcType="BIGINT" property="id" />
-    <result column="login_name" jdbcType="VARCHAR" property="loginName" />
-    <result column="role_name" jdbcType="VARCHAR" property="roleName" />
-    <result column="opt_content" jdbcType="VARCHAR" property="optContent" />
-    <result column="client_ip" jdbcType="VARCHAR" property="clientIp" />
-    <result column="create_time" jdbcType="TIMESTAMP" property="createTime" />
+    <id column="id" property="id" jdbcType="BIGINT" />
+    <result column="create_date" property="createDate" jdbcType="TIMESTAMP" />
+    <result column="modify_date" property="modifyDate" jdbcType="TIMESTAMP" />
+    <result column="ip" property="ip" jdbcType="VARCHAR" />
+    <result column="operation" property="operation" jdbcType="VARCHAR" />
+    <result column="operator" property="operator" jdbcType="VARCHAR" />
+    <result column="content" property="content" jdbcType="LONGVARCHAR" />
+    <result column="parameter" property="parameter" jdbcType="LONGVARCHAR" />
   </resultMap>
 </mapper>

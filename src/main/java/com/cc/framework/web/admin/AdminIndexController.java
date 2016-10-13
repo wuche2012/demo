@@ -105,6 +105,7 @@ public class AdminIndexController extends BaseController{
 	private ModelAndView logout(HttpServletRequest request){
 		Subject currentUser = SecurityUtils.getSubject();  
 		currentUser.logout();
+		rsaService.removePrivateKey(request);
 		return welcom(request);
 	}
 	

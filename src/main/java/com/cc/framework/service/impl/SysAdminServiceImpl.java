@@ -9,6 +9,8 @@ import java.util.ArrayList;
 import java.util.List;
 import java.util.Set;
 
+
+
 import org.apache.shiro.SecurityUtils;
 import org.apache.shiro.subject.Subject;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -23,6 +25,7 @@ import com.cc.framework.model.SysAdmin;
 import com.cc.framework.model.SysAdminRole;
 import com.cc.framework.model.SysRole;
 import com.cc.framework.model.SysRoleAuthority;
+import com.cc.framework.security.Principal;
 import com.cc.framework.service.SysAdminService;
 
 /**
@@ -58,6 +61,18 @@ public class SysAdminServiceImpl extends BaseService<SysAdmin> implements SysAdm
 		return null;
 	}
 
+	@Transactional(readOnly = true)
+	public String getCurrentUsername() {
+		Subject subject = SecurityUtils.getSubject();
+		if (subject != null) {
+			Principal principal = (Principal) subject.getPrincipal();
+			if (principal != null) {
+				return principal.getUsername();
+			}
+		}
+		return null;
+	}
+	
 	/*@Transactional(readOnly = true)
 	public List<String> findAuthorities(Long id) {
 		List<String> authorities = new ArrayList<String>();

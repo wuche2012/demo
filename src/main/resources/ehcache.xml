@@ -5,4 +5,5 @@
     <defaultCache maxEntriesLocalHeap="10000" eternal="true" timeToIdleSeconds="300" timeToLiveSeconds="600"
                   overflowToDisk="true" maxEntriesLocalDisk="100000"/>
 	<cache name="setting" maxElementsInMemory="100" eternal="true" overflowToDisk="true" />
+	<cache name="logConfig" maxElementsInMemory="100" eternal="true" overflowToDisk="true" />
 </ehcache>

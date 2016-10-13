@@ -91,10 +91,11 @@
 	<setting name="cnzzSiteId" value="" />
 	<setting name="cnzzPassword" value="" />
 	
-	<logConfig operation="系统设置" urlPattern="/admin/setting/update.jhtml" />
-	<logConfig operation="添加管理员" urlPattern="/admin/admin/save.jhtml" />
-	<logConfig operation="编辑管理员" urlPattern="/admin/admin/update.jhtml" />
-	<logConfig operation="删除管理员" urlPattern="/admin/admin/delete.jhtml" />
+	<logConfig operation="用户管理" urlPattern="/admin/admin/list" />
+	<logConfig operation="添加管理员" urlPattern="/admin/admin/save" />
+	<logConfig operation="编辑管理员" urlPattern="/admin/admin/update" />
+	<logConfig operation="删除管理员" urlPattern="/admin/admin/del.json" />
+	
 	<logConfig operation="添加会员" urlPattern="/admin/member/save.jhtml" />
 	<logConfig operation="编辑会员" urlPattern="/admin/member/update.jhtml" />
 	<logConfig operation="删除会员" urlPattern="/admin/member/delete.jhtml" />

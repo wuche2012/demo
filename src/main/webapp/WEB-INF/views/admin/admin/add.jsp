@@ -100,7 +100,7 @@
 								 <div class="col-sm-4">
                                     <div class="checkbox i-checks">
                                         <label>
-                                            <input type="checkbox" id="isEnabled" value="1" name="isEnabled"><i></i></label>
+                                            <input type="checkbox" id="isEnabled" value="true" name="isEnabled"><i></i></label>
                                     </div>
                                   </div>
 							</div>
